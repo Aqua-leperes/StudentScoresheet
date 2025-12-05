@@ -25,7 +25,7 @@ public class Main {
         // =========================
         // 2. INPUT STUDENT RECORDS
         // =========================
-        int n = 3;
+        int n = 12;
 
         String[] name = new String[n];
         double[] eng = new double[n];
