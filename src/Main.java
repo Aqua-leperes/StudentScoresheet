@@ -106,14 +106,14 @@ public class Main {
         // =========================
         // 5. PRINT REPORT
         // =========================
-        System.out.println("\n==============================================================================================");
+        System.out.println("\n========================================================================================================================");
 
         System.out.printf("%80s\n", schoolName);
         System.out.printf("%80s\n", "Teacher: " + teacherName);
         System.out.printf("%80s\n", "Grade: " + grade);
         System.out.printf("%80s\n", "Year: " + year);
 
-        System.out.println("==============================================================================================");
+        System.out.println("==========================================================================================================================");
 
         // Column Headers
         System.out.printf("%-20s %-12s %-12s %-12s %-12s %-12s %-15s %-10s %-5s\n",
@@ -126,22 +126,21 @@ public class Main {
                     name[i], eng[i], math[i], hist[i], geo[i], sci[i], prog[i], total[i], rank[i]);
         }
 
-        System.out.println("----------------------------------------------------------------------------------------------");
+        System.out.println("---------------------------------------------------------------------------------------------------------------------------");
 
         // Totals row (including TOTAL)
         System.out.printf("%-20s %-12.2f %-12.2f %-12.2f %-12.2f %-12.2f %-15.2f %-10.2f\n",
                 "Totals:", sumEng, sumMath, sumHist, sumGeo, sumSci, sumProg, sumTotal);
 
-        System.out.println("----------------------------------------------------------------------------------------------");
+        System.out.println("----------------------------------------------------------------------------------------------------------------------------");
 
         // Averages row (including Average Total)
         System.out.printf("%-20s %-12.2f %-12.2f %-12.2f %-12.2f %-12.2f %-15.2f %-10.2f\n",
                 "Averages:", sumEng/n, sumMath/n, sumHist/n, sumGeo/n, sumSci/n, sumProg/n, sumTotal/n);
 
-        System.out.println("==============================================================================================");
+        System.out.println("=============================================================================================================================");
 
         System.out.println("Ranks Count  A's: " + countA + "  B's: " + countB +
                 "  C's: " + countC + "  D's: " + countD + "  F's: " + countF);
     }
 }
-
