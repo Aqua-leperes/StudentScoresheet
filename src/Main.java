@@ -81,7 +81,7 @@ public class Main {
         // =========================
         // 4. CLASS STATISTICS
         // =========================
-        double sumEng = 0, sumMath = 0, sumHist = 0, sumGeo = 0, sumSci = 0, sumProg = 0;
+        double sumEng = 0, sumMath = 0, sumHist = 0, sumGeo = 0, sumSci = 0, sumProg = 0, sumTotal = 0;
         int countA = 0, countB = 0, countC = 0, countD = 0, countF = 0;
 
         for (int i = 0; i < n; i++) {
@@ -91,6 +91,7 @@ public class Main {
             sumGeo += geo[i];
             sumSci += sci[i];
             sumProg += prog[i];
+            sumTotal += total[i];
 
             switch (rank[i]) {
                 case 'A': countA++; break;
@@ -107,7 +108,6 @@ public class Main {
         // =========================
         System.out.println("\n==============================================================================================");
 
-        // Center the header (width 80)
         System.out.printf("%80s\n", schoolName);
         System.out.printf("%80s\n", "Teacher: " + teacherName);
         System.out.printf("%80s\n", "Grade: " + grade);
@@ -115,12 +115,12 @@ public class Main {
 
         System.out.println("==============================================================================================");
 
-        // Column Headers (FULL NAMES)
+        // Column Headers
         System.out.printf("%-20s %-12s %-12s %-12s %-12s %-12s %-15s %-10s %-5s\n",
                 "Student Name", "English", "Mathematics", "History", "Geography",
                 "Science", "Programming", "Total", "Rank");
 
-        // Student Rows
+        // Rows
         for (int i = 0; i < n; i++) {
             System.out.printf("%-20s %-12.2f %-12.2f %-12.2f %-12.2f %-12.2f %-15.2f %-10.2f %-5c\n",
                     name[i], eng[i], math[i], hist[i], geo[i], sci[i], prog[i], total[i], rank[i]);
@@ -128,20 +128,20 @@ public class Main {
 
         System.out.println("----------------------------------------------------------------------------------------------");
 
-        // Totals aligned
-        System.out.printf("%-20s %-12.2f %-12.2f %-12.2f %-12.2f %-12.2f %-15.2f\n",
-                "Totals:", sumEng, sumMath, sumHist, sumGeo, sumSci, sumProg);
+        // Totals row (including TOTAL)
+        System.out.printf("%-20s %-12.2f %-12.2f %-12.2f %-12.2f %-12.2f %-15.2f %-10.2f\n",
+                "Totals:", sumEng, sumMath, sumHist, sumGeo, sumSci, sumProg, sumTotal);
 
         System.out.println("----------------------------------------------------------------------------------------------");
 
-        // Averages aligned
-        System.out.printf("%-20s %-12.2f %-12.2f %-12.2f %-12.2f %-12.2f %-15.2f\n",
-                "Averages:", sumEng/n, sumMath/n, sumHist/n, sumGeo/n, sumSci/n, sumProg/n);
+        // Averages row (including Average Total)
+        System.out.printf("%-20s %-12.2f %-12.2f %-12.2f %-12.2f %-12.2f %-15.2f %-10.2f\n",
+                "Averages:", sumEng/n, sumMath/n, sumHist/n, sumGeo/n, sumSci/n, sumProg/n, sumTotal/n);
 
         System.out.println("==============================================================================================");
 
         System.out.println("Ranks Count  A's: " + countA + "  B's: " + countB +
                 "  C's: " + countC + "  D's: " + countD + "  F's: " + countF);
-
     }
 }
+
