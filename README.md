@@ -106,6 +106,6 @@ This assignment helps you build real-world programming skills such as:
 It forms a strong foundation for future Java and OOP projects.
 
 Author
-Leperes Christine Aquallah
-BSc Computer Science,
-Dedan Kimathi University of Technology
+ Leperes Christine Aquallah
+ BSc Computer Science,
+ Dedan Kimathi University of Technology
